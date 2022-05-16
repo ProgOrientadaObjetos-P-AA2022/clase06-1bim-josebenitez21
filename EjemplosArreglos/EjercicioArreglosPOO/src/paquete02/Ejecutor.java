@@ -21,7 +21,7 @@ public class Ejecutor {
         
         // Ingreso de valores por teclado
         System.out.println("Ingrese el nombre del estudiante");
-        nombreEstudiante = entrada.nextLine();
+        nombreEstudiante = entrada.nextLine().toUpperCase();
         System.out.println("Ingrese el número de calificaciones");
         numerocalificaciones = entrada.nextInt();
         // con el numerocalificaciones se crea el objeto arreglo de

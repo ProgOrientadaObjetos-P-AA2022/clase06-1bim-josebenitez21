@@ -28,7 +28,7 @@ public class LibretaCalificacion {
     public void establecerPromedio() {
         double suma = 0;
 
-        // for (int i = 0; i < calificaciones.length; i++) {
+        // for (int i = 0; i < calificaciones.length; i++) {   //es los mismo que la linea de abajo.
         for (int i = 0; i < obtenerCalificaciones().length; i++) {
             suma = suma + obtenerCalificaciones()[i];
         }
@@ -83,15 +83,17 @@ public class LibretaCalificacion {
     @Override
     public String toString() {
         String cadena = "Libreta de Calificaciones\n";
-        cadena = String.format("%sNombre: %s\nCalificaciones:\n", cadena,
+        cadena = String.format("%sNombre: %s\nCalificaciones:", cadena,
                 obtenerEstudiante());
         for (int i = 0; i < obtenerCalificaciones().length; i++) {
-            cadena = String.format("%s\t\t%.2f\n", cadena,
+            cadena = String.format("%s%.2f,", cadena,
                     obtenerCalificaciones()[i]);
         }
         cadena = String.format("%sPromedio calificaciones: %.2f\n"
                 + "Promedio cuantitativo: %s\n",
-                cadena, obtenerPromedio(), obtenerPromedioCualitativo());
+                cadena, obtenerPromedio(), obtenerPromedioCualitativo()); 
+        // Se puede llamar a los atributos en el toString si es que estos 
+        //pertenecen a la misma clase
         return cadena;
     }
 }
