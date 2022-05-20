@@ -12,6 +12,7 @@ public class EjemploDos {
         // crear un arreglo de objetos de tipo Calificacion
         Calificacion c = new Calificacion(10, "Computación");
         Calificacion c2 = new Calificacion(9, "Electrónica");
+
         
         Calificacion [] calificaciones = {c, c2};
         
